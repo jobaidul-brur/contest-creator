@@ -1,14 +1,25 @@
-import './App.css'
-import CodeforcesData from './components/UnsolvedProblemsComponent'
+import React, { useState } from "react";
+import HandlesForm from "./components/HandlesForm";
+import UnsolvedProblemsComponent from "./components/UnsolvedProblemsComponent";
+import { Box } from "@mui/material";
 
-function App() {
-  
+const App: React.FC = () => {
+  const [handles, setHandles] = useState<string[]>([]);
+
+  const handleAddHandle = (handle: string) => {
+    setHandles((prevHandles) => [...prevHandles, handle]);
+  };
+
   return (
-    <>
-      <h1>Contest Creator</h1>
-      <CodeforcesData />
-    </>
-  )
-}
+    <Box
+      sx={{
+        alignSelf: "center",
+      }}
+    >
+      <HandlesForm onAddHandle={handleAddHandle} />
+      {handles.length > 0 && <UnsolvedProblemsComponent handles={handles} />}
+    </Box>
+  );
+};
 
-export default App
+export default App;
