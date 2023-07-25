@@ -11,15 +11,18 @@ const App: React.FC = () => {
   };
 
   return (
-    <Box
-      sx={{
-        display: "flex",
-        flexDirection: "column",
-      }}
+    <div
+    style={{
+      display: 'flex',
+      flexDirection: 'column',
+      alignItems: 'center',
+      justifyContent: 'center',
+    }}
+   
     >
       <HandlesForm onAddHandle={handleAddHandle} />
       {handles.length > 0 && <UnsolvedProblemsComponent handles={handles} />}
-    </Box>
+    </div>
   );
 };
 

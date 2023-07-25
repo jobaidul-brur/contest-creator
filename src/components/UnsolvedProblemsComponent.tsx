@@ -85,7 +85,7 @@ const UnsolvedProblemsComponent: React.FC<UnsolvedProblemsComponentProps> = ({ h
   const handlesList = handles.join(', ');
 
   return (
-    <Container maxWidth="md" sx={{ marginTop: '2rem', textAlign: 'center' }}>
+    <Container maxWidth="md"  sx={{ marginTop: '2rem', textAlign: 'center', }}>
       <Typography variant="h4" gutterBottom>
         Unsolved Codeforces Problems
       </Typography>
