@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { TextField, Button, Container, Box, Grid } from '@mui/material';
+import { TextField, Button, Container, Box } from '@mui/material';
 
 interface HandlesFormProps {
   onAddHandle: (handle: string) => void;

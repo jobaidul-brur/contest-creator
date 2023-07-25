@@ -91,7 +91,7 @@ const UnsolvedProblemsComponent: React.FC<UnsolvedProblemsComponentProps> = ({ h
       </Typography>
       <pre style={{ fontFamily: 'monospace', fontSize: '14px' }}>{handlesList}</pre>
       <Grid container spacing={2} justifyContent="center">
-        {unsolvedProblems.map((problem, index) => (
+        {unsolvedProblems.map((problem) => (
           <Grid item xs={6} sm={4} md={3} key={`${problem.contestId}-${problem.index}`}>
             <Link
               href={`https://codeforces.com/problemset/problem/${problem.contestId}/${problem.index}`}

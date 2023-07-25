@@ -13,7 +13,8 @@ const App: React.FC = () => {
   return (
     <Box
       sx={{
-        alignSelf: "center",
+        display: "flex",
+        flexDirection: "column",
       }}
     >
       <HandlesForm onAddHandle={handleAddHandle} />
